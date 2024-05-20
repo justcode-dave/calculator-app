@@ -77,24 +77,53 @@ const Calculator = () => {
   return (
     <div className="calculator">
       <div className="display">{input}</div>
-      <div className="keypad">
-        {['7', '8', '9', '/', 'sin', 'cos', 'tan'].map((item) => (
-          <button key={item} onClick={() => handleButtonClick(item)}>{item}</button>
-        ))}
-        {['4', '5', '6', '*', '(', ')', 'sqrt'].map((item) => (
-          <button key={item} onClick={() => handleButtonClick(item)}>{item}</button>
-        ))}
-        {['1', '2', '3', '-', 'log', 'ln', '^'].map((item) => (
-          <button key={item} onClick={() => handleButtonClick(item)}>{item}</button>
-        ))}
-        {['0', '.', '=', '+', 'C'].map((item) => (
-          <button
-            key={item}
-            onClick={() => (item === '=' ? handleEqual() : item === 'C' ? handleClear() : handleButtonClick(item))}
-          >
-            {item}
-          </button>
-        ))}
+      <div className='container'>
+       <div className="keypad-left">
+              {['a', 'b', 'c', '/'].map((item) => (
+              <button key={item} onClick={() => handleButtonClick(item)}>{item}</button>
+              ))}
+              {['sin', 'cos', 'tan', '4', '5', '6', '*', '(', ')', 'sqrt'].map((item) => (
+              <button key={item} onClick={() => handleButtonClick(item)}>{item}</button>
+              ))}
+              {['1', '2', '3', '-', 'log', 'ln', '^'].map((item) => (
+              <button key={item} onClick={() => handleButtonClick(item)}>{item}</button>
+              ))}
+              {['0', '.', '=', '+', 'C'].map((item) => (
+              <button
+              key={item}
+              onClick={() => (item === '=' ? handleEqual() : item === 'C' ? handleClear() : handleButtonClick(item))}
+              >
+              {item}
+              </button>
+              ))}
+       </div>
+
+       <div className="keypad-right">
+              {['(', ',', ')', 'C'].map((item) => (
+              <button key={item} onClick={() => handleButtonClick(item)}>{item}</button>
+              ))}
+
+              {['7', '8', '9', '*'].map((item) => (
+              <button key={item} onClick={() => handleButtonClick(item)}>{item}</button>
+              ))}
+
+              {['4', '5', '6', '-'].map((item) => (
+              <button key={item} onClick={() => handleButtonClick(item)}>{item}</button>
+              ))}
+
+              {['1', '2', '3', '+'].map((item) => (
+              <button key={item} onClick={() => handleButtonClick(item)}>{item}</button>
+              ))}
+
+              {['C', '0', '.', '='].map((item) => (
+              <button
+              key={item}
+              onClick={() => (item === '=' ? handleEqual() : item === 'C' ? handleClear() : handleButtonClick(item))}
+              >
+              {item}
+              </button>
+              ))}
+       </div>
       </div>
     </div>
   );

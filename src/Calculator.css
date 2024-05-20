@@ -1,9 +1,9 @@
 .calculator {
-       width: 300px;
+       width: 400px;
        margin: 20px auto;
        padding: 10px;
-       border-radius: 10px;
-       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+       border-radius: 20px;
+       box-shadow: 0 0 20px rgba(255, 0, 0, 0.1);
      }
      
      .display {
@@ -17,11 +17,26 @@
        border-radius: 5px;
        margin-bottom: 10px;
      }
+
+     .container {
+       display: flex;
+       width: 400px;
+       padding: 1%;
+     }
      
-     .keypad {
+     
+     .keypad-left {
        display: grid;
        grid-template-columns: repeat(4, 1fr);
        gap: 10px;
+       padding-right: 10px;
+     }
+
+     .keypad-right {
+       display: grid;
+       grid-template-columns: repeat(4, 1fr);
+       gap: 10px;
+       padding-left: 10px;
      }
      
      .keypad button {
